@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<!--DOCTYPE html-->
+<html>
+<head>
+<title>{% block head_title %} Try Django 2.2 {% endblock head_title %}</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!--<link rel="stylesheet" href="{% static "/css/base.css" %}"/>-->
+<style>
+{% block style %}{% endblock style %}
+</style>
+</head>
+<body>
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0" nonce="ninQhoaU"></script>
+
+{% include "messages_display.html" %}
+<div class='container'>
+{% block content %}
+{% endblock content %}
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
